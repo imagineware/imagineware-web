@@ -1,2 +1,45 @@
 #{extends 'main.html' /}
-#{set title:'index.html' /}
+#{set title: event.title /}
+
+	<div id="content">
+
+		<div id="sidebar">
+		
+			<div class="block">
+
+			<div class="overline"><h2>Fecha y hora</h2></div>		
+				<ul class="inline">
+					<li>${event.eventDate.format('EEEE, dd MMMMM yyyy', 'ES').capitalizeWords()}</li>
+					<li>${event.time}</li>
+				</ul><!--END ul-->
+			</div><!--END block-->
+		
+		
+			<div class="block">
+			<div class="overline"><h2>Lugar</h2></div>
+				${event.location.raw()}
+			</div><!--END block-->
+			
+		</div><!--END sidebar-->
+
+		<div id="inner-content">
+		
+		<div class="overline"><h2>${event.title}</h2></div>
+		
+			<div id="portfolio-item-slides">
+				<div id="slides">
+					<div class="slides_container">
+						<a href="#"><img src="${event.bigPhotoURL}" alt="Foto del evento" width="650" height="390" /></a>
+					</div><!--END slides-container--> 
+				</div><!--END slides--> 
+			</div><!--END portfolio-item-slides-->
+			
+			<div >
+				${event.description.raw()}				
+			</div>
+			
+			<div class="divider"></div>	
+								
+		</div><!--END inner-content-->
+		
+	</div><!--END content-->
