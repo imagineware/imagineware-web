@@ -1,0 +1,24 @@
+		<div id="header">
+			<div class="header">
+				<div id="logo">
+					<div class="logo-uc3m">
+						<a href="http://www.uc3m.es">
+							<img src="@{'public/images/logo_uc3m.png'}" alt="LOGO UC3M" />
+						</a>
+					</div>
+					<h1>
+						ImagineWare
+					</h1>
+				</div><!--END logo-->	
+					<div id="smoothmenu" class="ddsmoothmenu">
+						<ul>
+							<li ${request.controller == 'Home' ? 'class=current' : ''}><a href="@{Home.index()}">Portada</a></li>
+							<li ${request.controller == 'Contact' ? 'class=current' : ''}><a href="@{Contact.index()}" class="last">Contacto</a></li>
+							
+						</ul><!--END ul-->
+						
+					</div><!--END jqueryslidemenu-->
+					
+			</div><!--END header class-->
+
+		</div><!--END header id-->

@@ -1,0 +1,315 @@
+/***************************************************
+				BLOCK
+***************************************************/
+#sidebar {
+	width: 250px;
+	float: right;
+	margin-left: 60px;
+}
+.block {
+	width: 100%;
+	float: left;
+	margin-bottom: 35px;
+	padding-bottom: 10px;
+}
+.block p {
+}
+.block ul {
+	top:0px;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	list-style-type: none;
+}
+.block ul li {
+	background-position: 0px;
+	float: left;
+	width: 100%;
+	margin-bottom: 10px;
+}
+.block ul li a, .block a {
+	text-decoration:none;
+	margin: 0px;
+	display: block;
+	font-size: 12px;
+	padding: 0px;
+	font-style: italic;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+.block ul.inline li a, .block ul.inline li span {
+	display: inline;
+}
+.block ul.inline li span {
+	font-style: normal;
+}
+.block ul li a:hover {
+	color: #85C441;
+}
+.block li span, .block li span a {
+	display:block;
+	font-weight: normal;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: italic;
+	text-transform: none;
+}
+.block li span a {
+	display: inline;
+}
+/***************************************************
+				      POST ENTRY
+***************************************************/
+.post-entry {
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 40px;
+	margin-left: 0px;
+	float: left;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 25px;
+	padding-left: 0px;
+	display: inline;
+}
+.post-entry ul {
+	display: block;
+}
+.post-entry .title, .post-entry .title a {
+	font-size: 24px;
+	line-height: 26px;
+	margin-bottom: 15px;
+	background-image: url(../images/bg-stripes-cream.gif);
+	background-repeat: repeat-y;
+}
+/***************************************************
+				 POST ENTRY META
+***************************************************/
+.post-meta {
+	margin-bottom: 15px;
+	font-style: italic;	
+}
+.post-meta a, .post-meta ul a  {
+}
+.post-meta a:hover {
+	color: #85C441;
+}
+.post-category {
+	font-size:11px;
+	text-transform:uppercase;
+	padding: 0px;
+	display: block;
+	margin: 0px;
+	margin-bottom: 10px;
+}
+/***************************************************
+				LIST POST ENTRY
+***************************************************/
+.post-entry .alignleft {
+	margin-top: 0;
+	margin-right: 30px;
+	margin-bottom: 15px;
+	margin-left: 0;
+}
+.post-entry .alignright {
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 15px;
+	margin-left: 30px;
+}
+.columnleft {
+	float:left;
+	width:307px;
+	margin-right: 35px;
+}
+.columnright {
+	float:right;
+	width:307px;
+	margin-top: 0;
+	margin-right: 0;
+	margin-left: 0;
+}
+/***************************************************
+					PAGINATION 
+***************************************************/
+.wp-pagenavi {
+	width:100%;
+	position:relative;
+	height: 20px;
+	margin: 0px;
+	float: right;
+	padding: 0px;
+	background-repeat: repeat-x;
+	background-position: left center;
+}
+.wp-pagenavi a, .wp-pagenavi a:link {
+	text-decoration: none;
+	display: inline;
+	margin: 0px;
+	padding: 0px;
+}
+.wp-pagenavi a:hover {
+	color: #85C441;
+}
+.wp-pagenavi a.older {
+	float: left;
+	padding-right: 8px;
+}.wp-pagenavi a.newer {
+	float: right;
+	padding-left: 8px;	
+}
+/***************************************************
+				  COMMENT FORM
+***************************************************/
+#commentform-wrap {
+	float: left;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+#comment-form {
+	position: relative;
+	width: 100%;
+	float: left;
+	margin: 0px;
+	padding-top: 20px;
+	padding-right: 0px;
+	padding-bottom: 20px;
+	padding-left: 0px;
+}
+#comment-form div {
+	display: inline;
+	float: left;
+	width: 100%;
+	position: relative;
+	margin-bottom: 15px;
+}
+#comment-form div label {
+	float: left;
+	text-align: right;
+	margin-left: 15px;
+}
+#comment-form .error {
+	position: absolute;
+	top: 0px;
+	color: #db4e43;
+	font-size: 10px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	right: 135px;
+}
+#comment-form input {
+	width:55%;
+	padding-top: 9px;
+	padding-right: 5px;
+	padding-bottom: 9px;
+	padding-left: 5px;
+	float: left;
+}
+#comment-form textarea {
+	height:130px;
+	width:90%;
+	padding: 5px;
+}
+#comment-form input.submit {
+	padding-top: 7px;
+	padding-right: 12px;
+	padding-bottom: 7px;
+	padding-left: 12px;	
+}
+#comment-form em {
+	color:#db4e43;
+	display: inline;
+}
+/***************************************************
+				     TAGS
+***************************************************/
+.tags a, a.tagsz-1, a.tagsz-2, a.tagsz-3, a.tagsz-4, a.tagsz-5{
+	color: #999999;
+	margin-top: 5px;
+	margin-right: 5px;
+	margin-bottom: 0px;
+	margin-left: 0;
+	font-weight: normal;
+	-moz-border-radius: 4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	padding-top: 5px;
+	padding-right: 9px;
+	padding-bottom: 5px;
+	padding-left: 9px;
+	float: left;
+	background-repeat: repeat;
+}
+.tags, .block div {
+	float: left;
+	width: 100%;
+}
+.tags a:hover, a.tagsz-1:hover, a.tagsz-2:hover, a.tagsz-3:hover, a.tagsz-4:hover, a.tagsz-5:hover {
+	text-decoration: none;	
+}
+/**************************************************
+					COMMENTS
+***************************************************/
+#comment-wrap {
+	float: left;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	width: 650px;
+}
+.commentwrap {
+	float: left;
+	width: 650px;	
+}
+.commentwrap .commentlist {
+	width: 650px;
+	float: left;
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+.commentwrap .commentlist li {
+	list-style-type: none;
+}
+.commentwrap .commentlist li .children li {
+	padding-left: 72px;		
+}
+.commentwrap .commentlist li .comment-meta {
+	margin-bottom: 15px;
+	padding-bottom: 3px;
+	font-size: 12px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+	float: left;
+	width: 100%;
+}
+.commentwrap .commentlist li .comment-meta .author {
+	float: left;
+}
+.commentwrap .commentlist li .comment-meta a {
+	text-decoration: none;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 18px;
+	font-style: italic;
+}
+.commentwrap .commentlist li .comment-meta a:hover {
+	color: #85C441;
+}
+.commentwrap .commentlist li .comment-meta .date {
+	float: right;
+	font-size: 11px;
+}
+.commentwrap .commentlist li .avatar {
+	float: left;
+}
+.commentwrap .commentlist li .comment {
+	padding-left: 85px;	
+}
+.commentwrap .commentlist li p {
+	display: inline;
+}
+.commentwrap .commentlist li p.reply a {
+	text-align: right;
+	margin-top: 15px;
+	margin-bottom: 35px;
+	font-size: 11px;
+}

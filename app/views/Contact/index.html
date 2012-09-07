@@ -1,0 +1,54 @@
+#{extends 'main.html' /}
+#{set title:'Imagineware - Contacto' /}
+#{set 'moreScripts'}
+	#{script 'form-validate.js' /}
+#{/set}
+
+		<div id="content">
+
+			<div id="sidebar">
+			
+				<div class="block contact-information">
+
+				<div class="overline"><h2>Sede</h2></div>		
+
+					<p>Despacho 1.1.B07, Campus de Colmenarejo, Universidad Carlos III de Madrid</p>
+
+				</div><!--END block-->		
+			</div><!--END sidebar-->
+
+			<div id="inner-content" class="contact-information">	
+				
+				<div class="overline"><h2>Envíanos cualquier sugerencia, propuesta o pregunta que tengas.</h2></div>			
+				<p>Por supuesto, también puedes contactarnos a través de las redes sociales.</p>
+
+			
+				<form action="@{Contact.sendEmail()}" id="contact-form" method="post">
+				
+					<div>
+						<input name="name" type="text" class="requiredField" />
+						<label>Nombre<em>*</em></label>
+					</div>
+										
+					<div>	
+						<input name="email" type="text" class="requiredField email" />
+						<label>Email de contacto<em>*</em></label>		
+					</div>
+										
+					<div>
+						<input name="url" type="text" class="last" />
+						<label>Url</label>	
+					</div>
+					
+					<div>
+						<textarea name="message" rows="50" cols="20"></textarea>		
+					</div>
+										
+					<div>
+						<input value="Enviar  &raquo;" type="submit" class="button submit grey" />
+					</div>
+				</form><!--END form ID contact-form-->	
+			
+			</div><!--END inner-content-->
+			
+		</div><!--END content-->
