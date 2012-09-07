@@ -11,7 +11,12 @@ public class Home extends Controller {
 
 	// Main page
     public static void index() {
-        render();
+    	
+    	List<IwEvent> incoming = Events.getIncomingEvents(3);
+    	
+    	List<IwEvent> past = Events.getPastEvents(3);
+    	
+        render(incoming, past);
     }
 
 }

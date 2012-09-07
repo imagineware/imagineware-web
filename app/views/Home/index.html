@@ -26,60 +26,35 @@
 		<div id="content">
 
 			<div class="overline"><h2>Próximos eventos</h2></div>
-							
-			<!--[[<div class="one-third home-entry"> 	
-				<a href="charla-kinectizate-2012.html">
-					<img src="img/events/kinectizate-profile.jpg" width="300" class="shadow" alt="Kinect" />
-					<h2 class="title">Introducción al desarrollo con el SDK de Kinect</h2>
-				</a>
-			</div>		
 			
-							
-			<div class="one-third home-entry">
-				<a href="charla-msrobotics-2012.html">	
-					<img src="img/events/msrobotics-profile.jpg" width="300" class="shadow" alt="Robot" />
-					<h2 class="title">Aprende Microsoft Robotics Studio</h2>
-				</a>				
-			</div>
-
-			<div class="one-third home-entry last">
-				<img src="img/events/unk-profile.jpg" width="300" class="shadow" alt="#" />
-				<h2 class="title"><a href="#">...</a></h2>		
-			</div>]]-->	
-			
+				#{list incoming, as:'event'}
+					<div class="one-third home-entry ${event_index == 2 ? 'last' : ''} "> 	
+						<a href="@{Events.index(event.evCode)}">
+							<img src="${event.smallPhotoURL}" width="300" class="shadow" alt="" />
+							<h2 class="title">${event.title}</h2>
+						</a>
+					</div>
+				#{/list}
+				#{if incoming.size() < 3}
+					<div class="one-third home-entry last">
+						<img src="@{'public/images/events/unk-profile.jpg'}" width="300" class="shadow" alt="" />
+						<h2 class="title"><a href="#">...</a></h2>		
+					</div>
+				#{/if}
 			
 			<div class="divider"></div>
 			
 			
 			<div class="overline"><h2>Eventos pasados</h2></div>	
 			
-			<!--[[ 
-			<div class="one-third home-entry">		
-											
-				<div class="post-meta">				
-					Martes 13 de Marzo, 2012		
-				</div>
-				<h2 class="title"><a href="charla-gsoc-2012.html">Charla informativa Google Summer of Code 2012</a></h2>					
-				<p>Si te la perdiste, ¡no te preocupes! Entra para ver las diapositivas y la transcripción de la misma, y pregúntanos todas tus dudas.</p>	
-			</div>
-			
-							
-			<div class="one-third home-entry"> 
-					
-				<div class="post-meta">				
-					February 22, 2011 - <a href="#">8 comments</a>		
-				</div>	
-				<h2 class="title"><a href="blog-single.html">Totam rem aperiam, eaque ipsa quae ab illo inventore et quasi architecto</a></h2>	
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>	
-		 	</div>		
-							
-			<div class="one-third home-entry last">		
-										
-				<div class="post-meta">				
-					February 28, 2011 - <a href="#">3 comments</a>	
-				</div>		
-				<h2 class="title"><a href="blog-single.html">Nemo enim ipsam voluptatem quia voluptas sit asperna</a></h2>		
-				<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur eaque ipsa quae ab illo inventore veritatis...</p>
-			</div>]]-->	
+				#{list past, as:'event'}
+					<div class="one-third home-entry ${event_index == 2 ? 'last' : ''} "> 	
+						<div class="post-meta">				
+							${event.eventDate.format('EEEE, dd MMMMM yyyy', 'ES').capitalizeWords()}		
+						</div>
+						<h2 class="title"><a href="@{Events.index(event.evCode)}">${event.title}</a></h2>					
+						<p>Entra para ver la grabación y/o diapositivas</p>	
+					</div>
+				#{/list}
 			
 		</div><!--END content-->
